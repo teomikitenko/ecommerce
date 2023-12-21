@@ -1,25 +1,41 @@
+@import '../../_css/common';
+
+.container {
+    width: 100%;
+    margin: 50px 0;
+
+    @include small-break {
+        margin-top: 30px;
+    }
+}
+
 .account {
-  margin-bottom: var(--block-padding);
+    display: grid;
+    grid-template-columns: 30% 1fr;
+    gap: 60px;
+    margin-top: 30px;
+
+    @include small-break {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-top: 30px;
+    }
 }
 
-.params {
-  margin-top: var(--base);
+.nav {
+    border: 1px solid var(--color-dark-50);
+    display: flex;
+    flex-direction: column;
+    height: min-content;
+    border-radius: 10px;
 }
 
-.purchases {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: var(--base);
+.navItem {
+    display: flex;
+    gap: 12px;
+    padding: 20px;
 }
 
-.purchase {
-  > * {
-    margin: 0;
-  }
-}
-
-.noPurchases {
-  font-weight: 600;
+.personalInfo {
+    margin-bottom: 30px;
 }
